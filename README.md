@@ -12,3 +12,4 @@
   - Square root of `a` mod `p`, where there exists an `x` such that `x^2 === a mod p`
   - Calculator on Elliptic Curve
   - Elgamal encryption based on ECC
+  - Paillier homomorphic cryptosystem
