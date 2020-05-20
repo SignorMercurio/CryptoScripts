@@ -31,9 +31,8 @@ def add(P, Q):
     K = dE(x1,y1)
   else:
     K = (y2-y1) * modinv(x2-x1+p, p)
-  B = (y1 - K*x1)
-  x0 = -(d-B**2) * modinv(x1*x2, p) % p # (x-x1)(x-x2)(x-x0) = ...+d-B^2
-  y0 = (K*x0 + B) % p
+  x0 = (K**2 - x1 - x2) % p
+  y0 = (K * (x1 - x0) - y1) % p
   return (x0, y0)
 
 def mul(P, x):
